@@ -30,10 +30,10 @@ run_test "1 2 3 4 5" "" "OK"
 run_test "5 4 3 2 1" "" "KO"
 
 # 3. Simple unsorted input, sorted with instructions
-run_test "3 2 1" "sa\nra\n" "OK"
+run_test "3 2 1" "sa\nrra\n" "OK"
 
 # 4. Already sorted input with instructions that keep it sorted
-run_test "1 2 3" "ra\nrb\nrr\n" "OK"
+run_test "1 2 3" "ra\nrb\nrrr\n" "OK"
 
 # 5. Unsorted input that cannot be sorted with given instructions
 run_test "3 2 1" "pb\npb\nra\n" "KO"
@@ -48,7 +48,7 @@ run_test "3 2 one 1" "" "Error"
 run_test "3 2 1" "invalid\n" "Error"
 
 # 9. Multiple valid moves resulting in a sorted stack
-run_test "4 1 3 2" "pb\npb\nra\nsa\npa\npa\n" "OK"
+run_test "4 1 3 2" "pb\npb\nra\nsa\npa\npa\n" "KO"
 
 # 10. Large input test with already sorted numbers
 run_test "1 2 3 4 5 6 7 8 9 10" "" "OK"

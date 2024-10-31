@@ -62,11 +62,11 @@ func main() {
 		case "ss":
 			checker.SwapAB(data)
 		case "ra":
-			checker.RevRotateA(data)
+			checker.RotateA(data)
 		case "rb":
-			checker.RevRotateB(data)
+			checker.RotateB(data)
 		case "rr":
-			checker.RevRotateAB(data)
+			checker.RotateAB(data)
 		case "rra":
 			checker.RevRotateA(data)
 		case "rrb":
@@ -82,7 +82,7 @@ func main() {
 			return
 		}
 		// fmt.Println("StackA after", instruction, ":", data.StackA)
-        // fmt.Println("StackB after", instruction, ":", data.StackB)
+		// fmt.Println("StackB after", instruction, ":", data.StackB)
 	}
 	if checker.IsSorted(data.StackA) && len(data.StackB) == 0 {
 		fmt.Println("OK")
