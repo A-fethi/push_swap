@@ -51,9 +51,7 @@ func main() {
 		return
 	}
 
-	// fmt.Println("Initial StackA:", data.StackA)
 	for _, instruction := range instructions {
-		// fmt.Printf("Executing: %s\n", instruction)
 		switch instruction {
 		case "sa":
 			checker.SwapA(data)
@@ -81,8 +79,6 @@ func main() {
 			fmt.Fprintln(os.Stderr, "Error")
 			return
 		}
-		// fmt.Println("StackA after", instruction, ":", data.StackA)
-		// fmt.Println("StackB after", instruction, ":", data.StackB)
 	}
 	if checker.IsSorted(data.StackA) && len(data.StackB) == 0 {
 		fmt.Println("OK")
